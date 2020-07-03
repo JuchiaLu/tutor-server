@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.juchia.tutor.pay.common.mapper.PayInfoMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.juchia.tutor.pay.common.entity.po.PayInfo">
+        <id column="id" property="id" />
+        <result column="appoint_id" property="appointId" />
+        <result column="user_id" property="userId" />
+        <result column="to_id" property="toId" />
+        <result column="type" property="type" />
+        <result column="state" property="state" />
+        <result column="trade_no" property="tradeNo" />
+        <result column="platform_trade_no" property="platformTradeNo" />
+        <result column="total_amount" property="totalAmount" />
+        <result column="name" property="name" />
+        <result column="description" property="description" />
+        <result column="refund_amount" property="refundAmount" />
+        <result column="refund_reason" property="refundReason" />
+        <result column="time_expire" property="timeExpire" />
+        <result column="timeout_express" property="timeoutExpress" />
+        <result column="request_no" property="requestNo" />
+        <result column="refund_time" property="refundTime" />
+        <result column="close_time" property="closeTime" />
+        <result column="success_time" property="successTime" />
+        <result column="finish_time" property="finishTime" />
+        <result column="status" property="status" />
+        <result column="weight" property="weight" />
+        <result column="cteate_time" property="cteateTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, appoint_id, user_id, to_id,type, state, trade_no, platform_trade_no, total_amount, name, description, refund_amount, refund_reason, time_expire, timeout_express, request_no, refund_time, close_time, success_time, finish_time, status, weight, cteate_time, update_time
+    </sql>
+
+</mapper>

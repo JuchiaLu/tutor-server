@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.juchia.tutor.business.common.mapper.NeedMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.juchia.tutor.business.common.entity.po.Need">
+        <id column="id" property="id" />
+        <result column="nickname" property="nickname" />
+        <result column="phone" property="phone" />
+        <result column="wechat" property="wechat" />
+        <result column="qq" property="qq" />
+        <result column="gender" property="gender" />
+        <result column="teacher_gender" property="teacherGender" />
+        <result column="state" property="state" />
+        <result column="student_id" property="studentId" />
+        <result column="first_category_id" property="firstCategoryId" />
+        <result column="second_category_id" property="secondCategoryId" />
+        <result column="third_category_id" property="thirdCategoryId" />
+        <result column="city_id" property="cityId" />
+        <result column="area_id" property="areaId" />
+        <result column="student_type_id" property="studentTypeId" />
+        <result column="teacher_type_id" property="teacherTypeId" />
+        <result column="teacher_comment_id" property="teacherCommentId" />
+        <result column="student_comment_id" property="studentCommentId" />
+        <result column="address" property="address" />
+        <result column="demand" property="demand" />
+        <result column="teach_date" property="teachDate" />
+        <result column="total_appoint" property="totalAppoint" />
+        <result column="frequency" property="frequency" />
+        <result column="time_hour" property="timeHour" />
+        <result column="hour_price" property="hourPrice" />
+        <result column="total_price" property="totalPrice" />
+        <result column="reason" property="reason" />
+        <result column="weight" property="weight" />
+        <result column="deleted" property="deleted" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, nickname, phone, wechat, qq, gender, teacher_gender, state, student_id, first_category_id, second_category_id, third_category_id, city_id, area_id, student_type_id, teacher_type_id, teacher_comment_id, student_comment_id, address, demand, teach_date, total_appoint, frequency, time_hour, hour_price, total_price, reason, weight, deleted, status, create_time, update_time
+    </sql>
+
+    <!--DTO通用查询映射结果-->
+    <resultMap id="ResultMapDTO" type="com.juchia.tutor.business.common.entity.dto.NeedDTO">
+        <id column="id" property="id" />
+        <result column="nickname" property="nickname" />
+        <result column="phone" property="phone" />
+        <result column="wechat" property="wechat" />
+        <result column="qq" property="qq" />
+        <result column="gender" property="gender" />
+        <result column="teacher_gender" property="teacherGender" />
+        <result column="state" property="state" />
+        <result column="student_id" property="studentId" />
+        <result column="address" property="address" />
+        <result column="demand" property="demand" />
+        <result column="teach_date" property="teachDate" />
+        <result column="total_appoint" property="totalAppoint" />
+        <result column="frequency" property="frequency" />
+        <result column="time_hour" property="timeHour" />
+        <result column="hour_price" property="hourPrice" />
+        <result column="total_price" property="totalPrice" />
+        <result column="reason" property="reason" />
+        <result column="weight" property="weight" />
+        <result column="deleted" property="deleted" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+
+        <!--一级分类-->
+        <association property="firstCategory" column="first_category_id" javaType="com.juchia.tutor.business.common.entity.po.Category" select="selectFirstCategoryForNeed" autoMapping="true" >
+
+        </association>
+
+        <!--二级分类-->
+        <association property="secondCategory" column="second_category_id" javaType="com.juchia.tutor.business.common.entity.po.Category" select="selectSecondCategoryForNeed" autoMapping="true" >
+
+        </association>
+
+        <!--三级分类-->
+        <association property="thirdCategory" column="third_category_id" javaType="com.juchia.tutor.business.common.entity.po.Category" select="selectThirdCategoryForNeed" autoMapping="true" >
+
+        </association>
+
+        <!--城市-->
+        <association property="city" column="city_id" javaType="com.juchia.tutor.business.common.entity.po.Area" select="selectCityForNeed" autoMapping="true" >
+
+        </association>
+
+        <!--地区-->
+        <association property="area" column="area_id" javaType="com.juchia.tutor.business.common.entity.po.Area" select="selectAreaForNeed" autoMapping="true" >
+
+        </association>
+
+        <!--学生类型-->
+        <association property="studentType" column="student_type_id" javaType="com.juchia.tutor.business.common.entity.po.Dict" select="selectStudentTypeForNeed" autoMapping="true" >
+
+        </association>
+
+        <!--家长类型-->
+        <association property="teacherType" column="teacher_type_id" javaType="com.juchia.tutor.business.common.entity.po.Dict" select="selectTeacherTypeForNeed" autoMapping="true" >
+
+        </association>
+
+        <!--学生评论-->
+        <association property="studentComment" column="student_comment_id" javaType="com.juchia.tutor.business.common.entity.po.Comment" select="selectStudentCommentForNeed" autoMapping="true" >
+
+        </association>
+
+        <!--家长评论-->
+        <association property="teacherComment" column="teacher_comment_id" javaType="com.juchia.tutor.business.common.entity.po.Comment" select="selectTeacherCommentForNeed" autoMapping="true" >
+
+        </association>
+
+    </resultMap>
+
+    <!--分页加条件查询DTO-->
+    <select id="selectPageDTO" resultMap="ResultMapDTO">
+        SELECT *
+        FROM `need`
+        ${ew.customSqlSegment}
+    </select>
+
+    <!--根据id查询DTO-->
+    <select id="selectDTOById" resultMap="ResultMapDTO">
+        SELECT *
+        FROM `need`
+        WHERE id = #{id}
+    </select>
+
+    <!--DTO关联查询一级分类 二级分类 三级分类-->
+    <select id="selectFirstCategoryForNeed" resultType="com.juchia.tutor.business.common.entity.po.Category">
+        Select *
+        FROM `category`
+        WHERE id=#{first_category_id}
+    </select>
+    <select id="selectSecondCategoryForNeed" resultType="com.juchia.tutor.business.common.entity.po.Category">
+        Select *
+        FROM `category`
+        WHERE id=#{second_category_id}
+    </select>
+    <select id="selectThirdCategoryForNeed" resultType="com.juchia.tutor.business.common.entity.po.Category">
+        Select *
+        FROM `category`
+        WHERE id=#{third_category_id}
+    </select>
+
+    <!--DTO关联查询地区-->
+    <select id="selectCityForNeed" resultType="com.juchia.tutor.business.common.entity.po.Area">
+        Select *
+        FROM `area`
+        WHERE id=#{city_id}
+    </select>
+    <select id="selectAreaForNeed" resultType="com.juchia.tutor.business.common.entity.po.Area">
+        Select *
+        FROM `area`
+        WHERE id=#{area_id}
+    </select>
+
+    <!--DTO关联查询学生类型 老师类型-->
+    <select id="selectStudentTypeForNeed" resultType="com.juchia.tutor.business.common.entity.po.Dict">
+        Select *
+        FROM `dict`
+        WHERE id=#{student_type_id}
+    </select>
+    <select id="selectTeacherTypeForNeed" resultType="com.juchia.tutor.business.common.entity.po.Dict">
+        Select *
+        FROM `dict`
+        WHERE id=#{teacher_type_id}
+    </select>
+
+    <!--DTO关联查询学生评论 家长评论-->
+    <select id="selectStudentCommentForNeed" resultType="com.juchia.tutor.business.common.entity.po.Comment">
+        Select *
+        FROM `comment`
+        WHERE id=#{student_comment_id}
+    </select>
+    <select id="selectTeacherCommentForNeed" resultType="com.juchia.tutor.business.common.entity.po.Comment">
+        Select *
+        FROM `comment`
+        WHERE id=#{teacher_comment_id}
+    </select>
+
+</mapper>

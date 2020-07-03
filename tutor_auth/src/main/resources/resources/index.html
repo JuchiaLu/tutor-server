@@ -1,0 +1,628 @@
+<html><head><style>body{font-size:16px;}</style><style>/*! CSS Used from: https://www.imooc.com/static/css/base.css */
+body,div,dl,dd,ul,li,h2,h4,input,button,p{margin:0;padding:0;}
+img{border:0;}
+:focus{outline:0;}
+h2,h4{font-size:100%;font-weight:400;}
+input,button{*font-size:100%;border:0;}
+body{background:#fff;color:#5e5e5e;font:14px/2em Microsoft YaHei,SimSun,Arial;}
+ul{list-style:none;}
+:link,:visited{text-decoration:none;}
+a:link,a:visited{color:#5e5e5e;}
+a:hover{color:#c9394a;}
+a:active{color:#666;}
+.clearfix:after{content:'\0020';display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{*zoom:1;}
+.l{float:left;}
+.r{float:right;}
+.hide{display:none;}
+a:focus{outline:0;-moz-outline:0;}
+input{outline:0;}
+h2{font-size:20px;}
+.ml20{margin-left:20px!important;}
+.color-red{color:#EF1300!important;}
+.pr{position:relative;}
+.cb{clear:both;}
+/*! CSS Used from: https://www.imooc.com/static/css/common/common-less.css?t=2.5 */
+body{font:14px/1.5 "PingFang SC","Microsoft Yahei","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial,sans-serif;color:#1c1f21;height:100%;}
+body{min-width:1200px;background-color:#f8fafc;overflow-y:scroll;padding-top:0;-webkit-transition:-webkit-transform .3s ease;transition:transform .3s ease;}
+a:link,a:visited{color:#1c1f21;}
+a:active,a:hover{color:#ec1500;}
+.clearfix:after{content:'\0020';display:block;height:0;clear:both;visibility:hidden;}
+.l{float:left;}
+.r{float:right;}
+.hide{display:none;}
+.page-container{margin:0 auto;width:1152px;}
+#main{padding:20px 0;min-height:calc(100% - 140px);}
+.waper{width:1200px;margin:0 auto;}
+.text-ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bindHintBox{background-color:#ffc;box-shadow:0 8px 16px 0 rgba(0,0,0,.2);position:absolute;right:10px;top:60px;width:313px;height:54px;z-index:3;font-size:12px;line-height:54px;color:#07111b;padding:0 15px;}
+.bindHintBox .closeBindHint{width:17px;height:17px;position:relative;top:4px;left:20px;cursor:pointer;background:url(https://www.imooc.com/static/img/nlogin.png) no-repeat 0 0;transition:transform .2s;-webkit-transition:transform .2s;-moz-transition:transform .2s;-o-transition:transform .2s;}
+.bindHintBox .arrow{position:absolute;right:15px;top:-10px;border-width:0 10px 10px 10px;border-color:transparent transparent #ffc transparent;border-style:solid;}
+.remind_warp{margin:12px 0;}
+.myspace_remind{width:10px;height:10px;background:url(https://www.imooc.com/static/img/space-remind.png) no-repeat 0 0;position:absolute;top:10px;right:10px;}
+#footer{background:#1c1f21;border-top:1px solid #e2e4e6;font-size:12px;color:#787d82;padding:27px 0;min-width:620px;}
+#footer .waper{width:auto;max-width:1200px;}
+#footer .footer_intro{padding-left:40px;}
+#footer p{line-height:1.7;}
+#footer .followus{margin-right:34px;padding-left:30px;}
+.followus a{float:left;position:relative;width:32px;height:32px;background-image:url(https://www.imooc.com/static/img/common/footer-sprite.png?t=0705);background-repeat:no-repeat;margin:3px 6px 0;opacity:.5;-webkit-transition:opacity .2s;-moz-transition:opacity .2s;transition:opacity .2s;z-index:2;}
+#footer .followus a:hover{opacity:1;}
+#footer .beian{background:url(https://www.imooc.com/static/img/beianicon.png) no-repeat 0 0;width:16px;height:16px;vertical-align:middle;background-size:cover;display:inline-block;margin-right:4px;margin-top:-4px;}
+.flw-weixin-box{position:absolute;display:none;width:170px;height:220px;left:-69px;bottom:35px;background:url(https://www.imooc.com/static/img/common/footer-sprite.png?t=0705) no-repeat 0 0;}
+.followus .followus-weixin{background-position:0 -279px;}
+.followus-weixin:hover .flw-weixin-box{display:block;}
+.followus .followus-weibo{background-position:0 -321px;}
+.followus .followus-qzone{background-position:0 -363px;}
+.footer_link ul{overflow:hidden;margin-top:-1px;}
+.footer_link a:active,.footer_link a:link,.footer_link a:visited{color:#c8cdd2;}
+.footer_link a:hover{color:#fff;}
+#footer .footer_link{margin-bottom:4px;line-height:1.8;}
+#footer .footer_link li{margin-right:30px;text-align:center;float:left;}
+.elevator{position:fixed;padding:0 16px;top:55%;margin-top:-140px;right:0;z-index:899;background-color:#fff;box-shadow:0 4px 12px 0 rgba(7,17,27,.1);}
+.elevator a{display:block;width:26px;padding:16px 0;font-size:22px;line-height:20px;color:#b5b9bc;box-sizing:border-box;text-align:center;border-bottom:1px solid #edf1f2;}
+.elevator a:hover{color:#14191e;}
+.elevator a i{font-size:24px;color:#d9dde1;}
+.elevator a i:hover{color:#14191e;}
+.elevator a span{display:none;font-size:12px;color:#07111b;line-height:14px;}
+.elevator .no-goto{border-bottom:none;}
+.elevator .elevator-dist i{display:inline-block;width:18px;height:20px;background:url(https://www.imooc.com/static/img/index/redPacket.png) no-repeat;background-size:100% 100%;background-position:top center;margin:2px 0;}
+.elevator .elevator-app:hover i,.elevator .elevator-dist:hover i,.elevator .elevator-faq:hover i,.elevator .elevator-msg:hover i,.elevator .elevator-top:hover i,.elevator .elevator-weixin:hover i{display:none;}
+.elevator .elevator-app:hover span,.elevator .elevator-dist:hover span,.elevator .elevator-faq:hover span,.elevator .elevator-msg:hover span,.elevator .elevator-top:hover span,.elevator .elevator-weixin:hover span{display:inline-block;}
+.elevator .elevator-app-box{position:absolute;width:172px;height:212px;bottom:-2px;right:56px;-webkit-transition:opacity .25s,transform .3s;-moz-transition:opacity .25s,transform .3s;transition:opacity .25s,transform .3s;opacity:0;max-width:0;-webkit-transform:scale(.01);-ms-transform:scale(.01);transform:scale(.01);-webkit-transform-origin:100% 95%;-ms-transform-origin:100% 95%;transform-origin:100% 95%;background:url(https://www.imooc.com/static/img/common/elevator.png?t=0705) no-repeat 0 -220px;}
+.elevator .elevator-app:hover .elevator-app-box{display:block;visibility:visible;opacity:1;max-width:none;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}
+.elevator .elevator-weixin-box{position:absolute;width:172px;height:212px;bottom:-4px;right:56px;-webkit-transition:opacity .25s,transform .3s;-moz-transition:opacity .25s,transform .3s;transition:opacity .25s,transform .3s;opacity:0;max-width:0;-webkit-transform:scale(.01);-ms-transform:scale(.01);transform:scale(.01);-webkit-transform-origin:100% 95%;-ms-transform-origin:100% 95%;transform-origin:100% 95%;background:url(https://www.imooc.com/static/img/common/elevator.png?t=0705) no-repeat 0 0;}
+.elevator .elevator-weixin:hover .elevator-weixin-box{display:block;visibility:visible;opacity:1;max-width:none;-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);}
+a{outline:0;}
+a:active{star:expression(this.onFocus=this.blur());}
+a,button,input{outline:0;}
+button::-moz-focus-inner{border:0;}
+input::-moz-focus-inner{border:0;}
+.btn{display:inline-block;margin-bottom:0;font-weight:200;text-align:center;vertical-align:middle;touch-action:manipulation;cursor:pointer;text-decoration:none;box-sizing:content-box;background-image:none;border:1px solid transparent;-webkit-appearance:none;white-space:nowrap;outline:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+.btn:focus,.btn:hover{color:#fff;text-decoration:none;}
+.btn:active{outline:0;background-image:none;}
+@media screen and (max-width:1479px){
+.nav-item li{transition:.3s;margin:0;}
+.nav-item li>a{padding:0 10px!important;}
+}
+@media screen and (max-width:1270px){
+.nav-item li{transition:.3s;margin:0;}
+.nav-item li>a{padding:0 5px!important;}
+#footer .followus{padding-left:0;}
+#footer .footer_link li{margin-right:10px;}
+}
+@media screen and (max-width:979px){
+.nav-item li>a{padding:0 15px;}
+.logined li>a,.remind_warp{width:50px;}
+.remind_warp .msg_remind{right:5px;}
+#footer{text-align:center;}
+#footer .followus{float:none;padding:0;margin-bottom:8px;}
+#footer .followus a{float:none;display:inline-block;}
+#footer .footer_intro{float:none;padding-left:0;}
+#footer .footer_link li{float:none;display:inline-block;margin-right:16px;}
+}
+@media screen and (max-width:767px){
+#nav{padding:0 15px;}
+.elevator{display:none;}
+#login-area{display:none;}
+#footer{display:none;}
+body:after{width:100%;height:100%;position:absolute;top:0;z-index:1000;content:" ";display:block;background:#000;opacity:0;-webkit-transition:all .3s ease;transition:all .3s ease;visibility:hidden;}
+}
+.newcomer{width:100%;height:136px;position:fixed;left:0;bottom:0;z-index:999;background-size:cover;background-position:center;background-repeat:no-repeat;}
+.newcomer i{position:absolute;right:20px;bottom:48px;font-size:20px;color:rgba(255,255,255,.6);}
+.newcomer i:hover{color:#fff;}
+@media screen and (max-width:480px){
+.elevator{display:none;}
+}
+[class*=" icon-"],[class^=icon-]{font-family:icomoon;speak:none;font-style:normal;font-weight:400;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.icon-score_shop:before{content:"\e927";}
+.icon-receipt:before{content:"\e928";}
+.icon-set_key:before{content:"\e922";}
+.icon-set_sns:before{content:"\e923";}
+.icon-set_phone:before{content:"\e924";}
+.icon-set_email:before{content:"\e925";}
+.icon-tick:before{content:"\e600";}
+.icon-right2:before{content:"\e914";}
+.icon-up2:before{content:"\e904";}
+.icon-set:before{content:"\e60d";}
+.icon-ques:before{content:"\e615";}
+.icon-ques-revert:before{content:"\e62f";}
+.icon-qq:before{content:"\e63b";}
+.icon-weibo:before{content:"\e63c";}
+.icon-weixin:before{content:"\e63e";}
+.icon-apple:before{content:"\e643";}
+.icon-android:before{content:"\e644";}
+.icon-wxgzh:before{content:"\e907";}
+.icon-appdownload:before{content:"\e908";}
+.icon-feedback:before{content:"\e906";}
+.icon-ques:before{content:"\e615";}
+/*! CSS Used from: https://www.imooc.com/static/moco/v1.0/dist/css/moco.min.css?t=201912261956 */
+.moco-btn{position:relative;display:inline-block;margin-bottom:0;text-align:center;vertical-align:middle;touch-action:manipulation;text-decoration:none;box-sizing:border-box;background-image:none;border-radius:0;-webkit-appearance:none;white-space:nowrap;outline:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;border-style:solid;border-width:1px;cursor:pointer;-weibkit-transition:all .3s;-moz-transition:all .3s;transition:all .3s;color:#545c63;background-color:transparent;border-color:#9199a1;opacity:1;padding:7px 16px;font-size:14px;line-height:1.42857143;border-radius:18px;}
+.moco-btn:active{outline:0;background-image:none;}
+.moco-btn:link,.moco-btn:visited{color:#545c63;}
+.moco-btn:hover,.moco-btn:focus,.moco-btn:active{color:#1c1f21;border-color:#545c63;opacity:1;}
+.moco-btn-normal{border-style:solid;border-width:1px;cursor:pointer;-weibkit-transition:all .3s;-moz-transition:all .3s;transition:all .3s;color:#545c63;background-color:transparent;border-color:#9199a1;opacity:1;}
+.moco-btn-normal:link,.moco-btn-normal:visited{color:#545c63;}
+.moco-btn-normal:hover,.moco-btn-normal:focus,.moco-btn-normal:active{color:#1c1f21;border-color:#545c63;opacity:1;}
+.moco-emoji{width:18px;height:18px;display:inline!important;margin:0!important;}
+#globalTopBanner{width:100%;min-width:1152px;max-width:2560px;height:40px;overflow:hidden;background:#eee;cursor:pointer;position:relative;z-index:899;display:none;}
+#globalRightFloat{width:102px;height:102px;position:fixed;right:0;top:50%;margin-top:-218px;cursor:pointer;overflow:hidden;z-index:899;display:none;}
+[class^="imv2-"],[class*=" imv2-"]{font-family:'imv2'!important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;letter-spacing:0;-webkit-font-feature-settings:"liga";-moz-font-feature-settings:"liga=1";-moz-font-feature-settings:"liga";-ms-font-feature-settings:"liga" 1;font-feature-settings:"liga";-webkit-font-variant-ligatures:discretionary-ligatures;font-variant-ligatures:discretionary-ligatures;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;}
+.imv2-close:before{content:"\e621";}
+.imv2-school:before{content:"\e947";}
+.imv2-bell1:before{content:"\e985";}
+.imv2-search2:before{content:"\e986";}
+.imv2-shopping-cart2:before{content:"\e987";}
+.text-ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.app-download{position:relative;}
+.app-download .app-load-box{display:none;position:absolute;right:0;top:100%;width:304px;padding:10px 24px 22px;box-sizing:border-box;background-color:#fff;color:#4D555D;line-height:16px;box-shadow:0 8px 16px 0 rgba(7,17,27,0.2);border-bottom-right-radius:8px;border-bottom-left-radius:8px;z-index:99999;font-size:12px;}
+.app-download .app-load-box h4{margin:12px 0;font-size:14px;color:#1C1F21;text-align:center;line-height:22px;}
+.app-download .app-load-box img{width:108px;height:108px;}
+.app-download .app-load-box p{margin-top:12px;text-align:center;}
+.app-download .app-load-box a.app-load-btn{display:block;color:#fff;width:132px;height:36px;margin-bottom:8px;line-height:36px;background:#4D555D;border-radius:18px;}
+.app-download .app-load-box a.app-load-btn:hover{background-color:#07111b;}
+.app-download .app-load-box a.app-load-btn i{font-size:16px;margin:0 8px 0 12px;vertical-align:-2px;}
+.user-card-box{position:relative;}
+.user-card-box .g-user-card{visibility:hidden;position:absolute;right:0;top:100%;z-index:1000;width:306px;padding:24px;background-color:#fff;box-shadow:0 8px 16px 0 rgba(7,17,27,0.2);border-bottom-right-radius:8px;border-bottom-left-radius:8px;box-sizing:border-box;}
+.user-card-box .g-user-card .card-top{color:#93999f;position:relative;}
+.user-card-box .g-user-card .card-top a{display:inline-block;color:#93999f;}
+.user-card-box .g-user-card .card-top a img{float:left;width:72px;height:72px;border-radius:50%;border:2px solid #fff;margin-right:12px;}
+.user-card-box .g-user-card .card-top .card-top-right-box{margin-top:14px;}
+.user-card-box .g-user-card .card-top .name{display:inline-block;font-size:16px;color:#07111b;width:170px;line-height:20px;}
+.user-card-box .g-user-card .card-top .meta{margin-top:4px;font-size:12px;line-height:12px;}
+.user-card-box .g-user-card .card-top .meta a{margin-right:12px;}
+.user-card-box .g-user-card .card-top .meta b{margin-left:2px;}
+.user-card-box .g-user-card .user-center-box{margin-top:16px;margin-bottom:14px;}
+.user-card-box .g-user-card .user-center-box ul li{position:relative;width:128px;width:127px\9;background:#F8FAFC;border-radius:2px;color:#4d555d;margin:0 2px 2px 0;}
+.user-card-box .g-user-card .user-center-box ul li .user-center-icon{position:relative;top:3px;font-size:16px;margin-right:8px;}
+.user-card-box .g-user-card .user-center-box ul li a{width:100%;height:36px;line-height:36px;padding-left:12px;text-align:left;box-sizing:border-box;}
+.user-card-box .g-user-card .user-center-box ul li:hover{background:#d9dde1;}
+.user-card-box .g-user-card .user-center-box ul li:hover a{color:#4d555d;}
+.user-card-box .g-user-card .user-center-box ul li:nth-child(2n){margin-right:0;}
+.user-card-box .g-user-card .card-sets{margin-top:16px;font-size:12px;line-height:12px;}
+.user-card-box .g-user-card .card-sets a{color:#93999F;}
+.user-card-box .g-user-card .card-sets a:hover{color:#4d555d;background:none;}
+.shop-cart{position:relative;}
+.shop-cart .shop-cart-icon .shopping_icon{padding:0 5px;height:16px;line-height:16px;background:#f01414;color:#fff;margin-left:8px;display:inline-flex;border-radius:8px;}
+.shop-cart .my-cart{display:none;width:344px;padding:0 16px;position:absolute;right:0;background:#fff;box-sizing:border-box;z-index:99999;box-shadow:0 8px 16px 0 rgba(28,31,33,0.2);border-bottom-right-radius:8px;border-bottom-left-radius:8px;}
+#new_header{background:#07111B;}
+#new_header .new-header{width:1152px;height:40px;margin:0 auto;font-size:14px;}
+#new_header .new-header .nav-item li{float:left;}
+#new_header .new-header .nav-item li>a{display:block;height:40px;line-height:40px;color:#717A84;font-weight:bold;position:relative;padding:0 18px;}
+#new_header .new-header .nav-item li>a:hover{color:#fff;}
+#new_header .new-header .nav-item li:first-child a{padding-left:0;}
+#new_header .new-header .user-mycourse-box{margin-right:18px;}
+#new_header .new-header .user-mycourse-box>a{color:#717A84;font-size:12px;line-height:40px;text-align:center;display:block;}
+#new_header .new-header .user-mycourse-box>a:hover{color:#fff;-webkit-transition:color .3s;-moz-transition:color .3s;transition:color .3s;}
+#new_header .new-header .header-right{float:right;display:flex;flex-direction:row;align-items:center;justify-content:center;height:40px;}
+#new_header .new-header .header-right .app-download{line-height:40px;}
+#new_header .new-header .header-right .app-download,#new_header .new-header .header-right .search-box,#new_header .new-header .header-right .shop-cart{float:left;position:relative;margin-right:36px;font-size:12px;}
+#new_header .new-header .header-right .app-download a,#new_header .new-header .header-right .search-box a,#new_header .new-header .header-right .shop-cart a{color:#717A84;}
+#new_header .new-header .header-right .app-download a:hover,#new_header .new-header .header-right .search-box a:hover,#new_header .new-header .header-right .shop-cart a:hover{color:#fff;}
+#new_header .new-header .header-right .app-download .app-load-btn{color:#fff;}
+#new_header .new-header .header-right .app-download .app-load-btn:hover{color:#fff;}
+#new_header .new-header .header-right .search-box i{font-size:22px;vertical-align:middle;}
+#new_header .new-header .header-right .search-box input{display:none;}
+#new_header .new-header .header-right .search-box .input-search{padding:0;position:relative;margin-right:0;}
+#new_header .new-header .header-right .search-box .input-search .input-box{width:240px;box-sizing:border-box;}
+#new_header .new-header .header-right .search-box .input-search .input-box:hover{color:fff;background:transparent;}
+#new_header .new-header .header-right .search-box .input-search .input-box input{display:inline-block;width:200px;height:32px;line-height:32px;box-sizing:border-box;padding-left:12px;background:transparent;font-size:14px;color:#fff;}
+#new_header .new-header .header-right .search-box .input-search .input-box input::-ms-clear,#new_header .new-header .header-right .search-box .input-search .input-box input::-ms-reveal{display:none;}
+#new_header .new-header .header-right .search-box .input-search .input-box .nav-searchBtn{display:inline-block;text-align:center;-webkit-transition:background-color .2s;-moz-transition:background-color .2s;transition:background-color .2s;position:absolute;top:-2px;right:0;cursor:pointer;}
+#new_header .new-header .header-right .search-box .input-search .input-box .nav-searchBtn i{line-height:36px;}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box{width:240px;position:absolute;top:40px;left:0;background:#fff;z-index:10;box-shadow:0 8px 16px 0 rgba(7,17,27,0.2);}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box h2{font-size:12px;color:#1C1F21;line-height:12px;margin-bottom:8px;font-weight:bold;}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box .hot{padding:12px 0 8px 12px;box-sizing:border-box;}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box .hot .hot-item{background:rgba(84,92,99,0.1);border-radius:12px;padding:4px 12px;line-height:16px;margin-right:4px;margin-bottom:4px;display:inline-block;cursor:pointer;font-size:12px;color:#545C63;}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box .hot .hot-item:hover{background:rgba(84,92,99,0.2);color:#1C1F21;}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box .history{border-top:1px solid rgba(28,31,33,0.1);padding:12px 0 0;box-sizing:border-box;}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box .history h2{margin-left:12px;}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box .history h2 .history-clear{font-size:12px;color:#9199A1;line-height:12px;float:right;margin-right:12px;font-weight:normal;}
+#new_header .new-header .header-right .search-box .input-search .nav-search-box .history h2 .history-clear:hover{color:#545c63;}
+#new_header .new-header .header-right .search-box .input-search .nav-correlate-box{width:240px;position:absolute;top:40px;left:0;background:#FFFFFF;box-shadow:0 8px 16px 0 rgba(7,17,27,0.2);z-index:10;}
+#new_header .new-header .header-right .shop-cart .imv2-shopping-cart2{font-size:22px;vertical-align:middle;margin-right:0;}
+#new_header .new-header .header-right .shop-cart .shopping_icon{position:absolute;top:-4px;left:24px;font-size:12px;width:24px;height:16px;line-height:16px;text-align:center;padding:0;margin-left:0;display:inline-table;background:#F20D0D;border-radius:18px;color:#fff;}
+#new_header .new-header .header-right .shop-cart .my-cart{top:31px;right:-18px;}
+#new_header .new-header .header-right #login-area{float:left;position:relative;}
+#new_header .new-header .header-right #login-area .logined{display:flex;flex-direction:row;align-items:center;justify-content:center;}
+#new_header .new-header .header-right #login-area .logined>li{float:left;}
+#new_header .new-header .header-right #login-area .logined .user-card-item{line-height:40px;}
+#new_header .new-header .header-right #login-area .logined .remind_warp{width:auto;margin:0 36px 0 0;position:relative;}
+#new_header .new-header .header-right #login-area .logined .remind_warp .msg_remind{display:none;width:8px;height:8px;background-color:#f01414;border-radius:50%;position:absolute;top:0;left:20px;}
+#new_header .new-header .header-right #login-area .logined .remind_warp>a{display:block;color:#717A84;text-align:center;}
+#new_header .new-header .header-right #login-area .logined .remind_warp>a:hover{color:#fff;}
+#new_header .new-header .header-right #login-area .logined .remind_warp .imv2-bell1{vertical-align:middle;font-size:22px;}
+#new_header .new-header .header-right #login-area .logined .user-card-box .user-card-item img{display:inline-block;width:24px;height:24px;border-radius:50%;vertical-align:middle;}
+#new_header .new-header .header-right #login-area .logined .user-card-box .user-card-item .myspace_remind{width:10px;height:10px;background:url(https://www.imooc.com/static/img/common/space-remind.png) no-repeat 0 0;position:absolute;top:10px;right:10px;}
+#new_header .new-header .header-right #login-area .logined .user-card-box:hover .user-card-item img{border:1px solid #d3d6d9;}
+/*! CSS Used from: https://www.imooc.com/static/css/user/settings/common-less.css */
+#main{padding:0!important;min-height:calc(100% - 140px);}
+body{background-color:#fff;}
+input{font-family:'Microsoft YaHei';}
+.pull-right{float:right;}
+.line{height:1px;background-color:#d0d6d9;margin-top:12px;}
+.oplog-tip{line-height:40px;font-size:12px;color:#f56108;background-color:#fff4e5;padding:0 20px;margin-bottom:20px;}
+.oplog-tip a{color:#008cc8;}
+.oplog-tip a:hover{color:#008cc8;}
+.oplog-tip .tip-close{font-size:12px;cursor:pointer;}
+.common-title{line-height:40px;font-size:16px;font-weight:700;}
+.common-title a{color:#93999f;font-weight:400;}
+.common-title a i{color:#008cc8;margin-right:4px;vertical-align:text-top;}
+.common-title a:hover{color:#008cc8;}
+.common-title .title-tips{font-size:12px;color:#93999f;margin-left:18px;font-weight:400;}
+.setting-left li{border:none!important;}
+.settings-cont{width:1200px;margin:0 auto;padding:30px 0;}
+.settings-cont .setting-left{width:216px;background-color:#f8fafc;}
+.settings-cont .setting-left .avator-wapper{padding:32px 0 24px;}
+.settings-cont .setting-left .avator-mode{position:relative;width:100px;height:100px;box-sizing:border-box;border:4px solid #d9dde1;border-radius:50px;margin:0 auto;text-align:center;overflow:hidden;}
+.settings-cont .setting-left .avator-mode .update-avator{font-size:12px;position:absolute;width:100%;left:0;bottom:-30px;transition:bottom .3s;-moz-transition:bottom .3s;-webkit-transition:bottom .3s;-o-transition:bottom .3s;}
+.settings-cont .setting-left .avator-mode .update-avator p{background:rgba(0,0,0,.6);color:#fff;line-height:30px;}
+.settings-cont .setting-left .avator-mode .update-avator a{color:inherit;}
+.settings-cont .setting-left .des-mode{font-size:16px;text-align:center;}
+.settings-cont .setting-left .des-mode p{line-height:24px;width:160px;margin:8px auto 4px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.settings-cont .setting-left .des-mode span{font-size:12px;color:#545c63;display:block;margin-bottom:8px;line-height:1;}
+.settings-cont .setting-left .des-mode .auth-list dd{display:inline-block;position:relative;background-color:#fff;width:26px;height:26px;border-radius:13px;box-sizing:border-box;padding-top:2.5px;margin-right:12px;color:#a9adb2;}
+.settings-cont .setting-left .des-mode .auth-list dd.active{color:#f01414;}
+.settings-cont .setting-left .des-mode .auth-list dd .icon-tips{position:absolute;width:120px;line-height:30px;left:50%;margin-left:-60px;bottom:-36px;font-size:12px;color:#4d555d;text-align:center;background-color:#fff;box-shadow:0 1px 2px #cccecf;}
+.settings-cont .setting-left .des-mode .auth-list dd .icon-tips .triangle_border_up{width:0;height:0;border-width:0 6px 7px;border-style:solid;border-color:transparent transparent #efefef;position:absolute;left:50%;margin-left:-7px;top:-7px;}
+.settings-cont .setting-left .des-mode .auth-list dd .icon-tips .triangle_border_up span{display:block;width:0;height:0;border-width:0 5px 5px;border-style:solid;border-color:transparent transparent #fff;position:absolute;top:2px;left:-5px;}
+.settings-cont .setting-left .des-mode .auth-list dd:last-child{margin-right:0;}
+.settings-cont .setting-left .list-wapper{overflow:hidden;}
+.settings-cont .setting-left .list-wapper h2{font-size:16px;line-height:24px;margin:12px 24px;font-weight:700;}
+.settings-cont .setting-left .list-wapper .line{height:1px;background-color:#d9dde1;margin:0 24px;}
+.settings-cont .setting-left .list-wapper .menu{padding:10px 0 25px;}
+.settings-cont .setting-left .list-wapper .menu a{display:block;position:relative;padding:0 0 0 54px;height:48px;line-height:48px;transition:background-color .3s ease;}
+.settings-cont .setting-left .list-wapper .menu a .arr{position:absolute;right:25px;top:0;color:#b5b9bc;}
+.settings-cont .setting-left .list-wapper .menu a:hover{background-color:#f3f5f7;color:#f01414;}
+.settings-cont .setting-left .list-wapper .menu a:hover .arr{color:#f01414;}
+.settings-cont .setting-left .list-wapper .menu a.on{color:#fff;background-color:#f01414;}
+.settings-cont .setting-left .list-wapper .menu a.on .arr{color:#fff;}
+.settings-cont .setting-right{float:left;margin-left:48px;width:936px;box-sizing:border-box;background-color:#fff;}
+.settings-cont .setting-right-wrap{min-height:550px;}
+input{font-family:"Microsoft Yahei","微软雅黑";}
+/*! CSS Used from: https://www.imooc.com/static/css/user/settings/profile-less.css */
+.common-title{line-height:40px;font-size:16px;font-weight:700;}
+.common-title a{color:#93999f;font-weight:400;font-size:14px;}
+.common-title a i{color:#008cc8;margin-right:4px;vertical-align:middle;}
+.common-title a:hover{color:#008cc8;}
+.line{height:1px;background-color:#d0d6d9;margin-top:12px;}
+#main{padding-top:0;padding-bottom:50px;}
+.setting-right-wrap{padding:0!important;}
+.page-settings .mr87{margin-left:87px;}
+.page-settings .red{color:#f01414;}
+.page-settings .common-title a{font-size:12px;}
+.page-settings .common-title i{font-size:14px;}
+.page-settings .setting .bingd .h380{height:190px!important;}
+.page-settings .setting .bingd .bb0{border-bottom:0!important;}
+.page-settings .setting .bingd .itemBox{height:88px;overflow:hidden;margin:auto;border-bottom:1px solid #d9dde1;}
+.page-settings .setting .bingd .itemBox .left{width:60px;float:left;font-size:36px;color:#d9dde1;line-height:98px;padding-left:24px;}
+.page-settings .setting .bingd .itemBox p{line-height:24px;font-size:12px;}
+.page-settings .setting .bingd .itemBox .center{padding-top:22px;width:510px;float:left;}
+.page-settings .setting .bingd .itemBox .center .accountBox{width:650px;margin-top:19px;}
+.page-settings .setting .bingd .itemBox .center .accountBox .inner-i-box{width:200px;float:left;margin-right:24px;}
+.page-settings .setting .bingd .itemBox .center .accountBox .inner-i-box .btn{display:block;width:62px;height:22px;color:#07111b;line-height:22px;font-size:12px;border:1px solid #d9dde1;}
+.page-settings .setting .bingd .itemBox .center .accountBox .inner-i-box .bind-name{font-size:16px;font-weight:700;}
+.page-settings .setting .bingd .itemBox .center .accountBox .inner-i-box:last-child{margin-right:0;}
+.page-settings .setting .bingd .itemBox .center .accountBox .icon-qq,.page-settings .setting .bingd .itemBox .center .accountBox .icon-weibo,.page-settings .setting .bingd .itemBox .center .accountBox .icon-weixin{float:left;color:#c8cdd2;width:80px;height:80px;font-size:80px;}
+.page-settings .setting .bingd .itemBox .right{float:right;padding-right:12px;margin-top:28px;}
+.page-settings .setting .bingd .itemBox .right .moco-btn-normal{padding-left:15px;padding-right:15px;}
+.page-settings .setting .bingd .itemBox .font1{color:#2b333b;font-size:16px;font-weight:700;}
+.page-settings .setting .bingd .itemBox .font2{color:#93999f;font-size:14px;}
+.page-settings .setting .bingd .itemBox .font3{color:#2b333b;font-size:14px;}
+.page-settings .setting .bingd .itemBox .font4{color:#f01414;font-size:14px;}
+.moco-btn{margin-right:10px;}
+/*! CSS Used from: https://www.imooc.com/static/lib/layer/1.6.0/skin/layer.css?v=201912261956 */
+body,div,dl,dd,ul,li,h2,h4,input,button,p{margin:0;padding:0;}
+/*! CSS Used fontfaces */
+@font-face{font-family:icomoon;src:url(https://www.imooc.com/static/fonts/icomoon/fonts/icomoon.eot?d8493nx);src:url(https://www.imooc.com/static/fonts/icomoon/fonts/icomoon.eot?d8493nx#iefix) format('embedded-opentype'),url(https://www.imooc.com/static/fonts/icomoon/fonts/icomoon.ttf?d8493nx) format('truetype'),url(https://www.imooc.com/static/fonts/icomoon/fonts/icomoon.woff?d8493nx) format('woff'),url(https://www.imooc.com/static/fonts/icomoon/fonts/icomoon.svg?d8493nx#icomoon) format('svg');font-weight:400;font-style:normal;}
+@font-face{font-family:'imv2';src:url('https://www.imooc.com/static/moco/v1.0/dist/imv2fonts/imv2.eot?20190815');src:url('https://www.imooc.com/static/moco/v1.0/dist/imv2fonts/imv2.eot?20190815#iefix') format('embedded-opentype'),url('https://www.imooc.com/static/moco/v1.0/dist/imv2fonts/imv2.ttf?20190815') format('truetype'),url('https://www.imooc.com/static/moco/v1.0/dist/imv2fonts/imv2.woff?20190815') format('woff'),url('https://www.imooc.com/static/moco/v1.0/dist/imv2fonts/imv2.svg?20190815#imv2') format('svg');font-weight:normal;font-style:normal;}</style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<!-- 窄条导航 -->
+<div id="globalTopBanner"></div>
+<div id="new_header">
+    <div class="page-container new-header clearfix" id="nav" style="display:none">
+        <ul class="nav-item">
+            <li><a href="/" target="_self" class="imooc">慕课网首页</a></li>
+            <li><a href="/course/list" target="_self">免费课程</a></li>
+            <li><a href="http://coding.imooc.com" target="_self">实战课程</a></li>
+            <li><a href="http://class.imooc.com" class="" target="_self">就业班</a></li>
+            <li><a href="/read" target="_self">专栏</a></li>
+            <li><a href="/wenda" target="_self">猿问</a></li>
+            <li><a href="/article" target="_self">手记</a></li>
+            <!-- <li><a href="http://job.imooc.com" target="_self">猿聘<i class="icn-new"></i></a></li> -->
+        </ul>
+        <div class="header-right">
+            <div class="app-download" id="js-app-load">
+                <a href="http://www.imooc.com/mobile/app" target="_blank">下载APP</a>
+                <div class="app-load-box clearfix js-load-box">    
+                    <div class="mobile-load-box">
+                        <h4>慕课网APP - 随时随地学编程</h4>
+                        <img src="https://www.imooc.com/static/img/common/appload.png" class="l">
+                        <div class="r">
+                            <a class="app-load-btn" href="https://itunes.apple.com/cn/app/mu-ke-wang/id722179140?mt=8" target="_blank"><i class="icon-apple"></i>App Store下载</a>
+                            <a class="app-load-btn" href="http://www.imooc.com/mobile/appdown" target="_blank"><i class="icon-android"></i>Android下载</a>
+                            <p>扫描下载慕课网APP</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search-box">
+                <a href="javascript:void(0);" id="common-nav-search">
+                    <i class="imv2-search2"></i>
+                </a>
+                <div class="input-search hide" id="common-input-search">
+                    <div class="input-box">
+                        <input type="text" class="nav-search-input" autocomplete="off">
+                        <a href="javascript:void(0);" class="nav-searchBtn js-nav-searchBtn">
+                            <i class="imv2-search2"></i>
+                        </a>
+                    </div>
+                    <div class="nav-search-box hide">
+                        <div class="hot">
+                            <h2>热搜</h2>
+                            <div class="hot-box"><a href="javascript:void(0)" class="hot-item js-history-search">Vue</a><a href="javascript:void(0)" class="hot-item js-history-search">Python</a><a href="javascript:void(0)" class="hot-item js-history-search">Java</a><a href="javascript:void(0)" class="hot-item js-history-search">flutter</a><a href="javascript:void(0)" class="hot-item js-history-search">springboot</a><a href="javascript:void(0)" class="hot-item js-history-search">docker</a><a href="javascript:void(0)" class="hot-item js-history-search">React</a><a href="javascript:void(0)" class="hot-item js-history-search">小程序</a></div>
+                        </div>
+                        <div class="history hide">
+                            <h2>最近搜索<a href="javascript:void(0);" class="history-clear js-clear-history">清空</a></h2>
+                            <div class="history-box">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="nav-correlate-box hide">
+                        <div class="correlate">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="shop-cart" id="shop-cart">
+                <a href="http://order.imooc.com/pay/cart" class="shop-cart-icon" target="_blank">
+                    <span class="imv2-shopping-cart2 js-endcart"></span><span class="shopping_icon js-cart-num" data-ordernum="0" data-cartnum="0" style="display: none">0</span>
+                </a>
+                <div class="my-cart" id="js-my-cart"></div>
+            </div>
+                        <div id="login-area">
+                <ul class="clearfix logined">
+                    <li class="remind_warp">
+                        <i class="msg_remind" style="display: inline;"></i>
+                        <a target="_blank" href="http://www.imooc.com/u/7542095/notices">
+                            <i class="imv2-bell1"></i>
+                        </a>
+                    </li>
+                    <li class="user-mycourse-box">
+                        <a class="js-header-courseurl" href="https://www.imooc.com/u/index/allcourses" target="_self">
+                            <span>我的课程</span>
+                        </a>
+                    </li>
+                    <li class="user-card-box" id="header-user-card">
+                        <a id="header-avator" class="user-card-item js-header-avator" action-type="my_menu" href="https://www.imooc.com/u/index/allcourses" target="_self">
+                            <img width="40" height="40" src="http://img4.mukewang.com/54584f3100019e9702200220-100-100.jpg">
+                            <i class="myspace_remind" style="display: none;"></i>
+                            <span style="display: none;">动态提醒</span>
+                        </a>
+                        <div class="g-user-card"><div class="card-inner">                        <div class="card-top clearfix">                            <a class="l" href="https://www.imooc.com/u/index/allcourses"><img src="http://img4.mukewang.com/54584f3100019e9702200220-100-100.jpg" alt="慕斯4113440"></a>                            <div class="card-top-right-box l">                                <a href="https://www.imooc.com/u/index/allcourses"><span class="name text-ellipsis">慕斯4113440</span></a>                                <div class="meta">                                    <a href="/u/index/experience">经验<b id="js-user-mp">0</b></a>                                    <a href="/u/index/credit">积分<b id="js-user-credit">1</b></a>                                </div>                            </div>                        </div>                        <div class="user-center-box">                            <ul class="clearfix">                                <li class="l"><a href="https://www.imooc.com/u/index/allcourses" target="_blank"><span class="user-center-icon icon-tick"></span>我的课程</a></li>                                <li class="l">                                    <a href="http://order.imooc.com/myorder" target="_blank"><span class="user-center-icon icon-receipt"></span>订单中心</a>                                                                    </li>                                <li class="l"><a href="/mall/index" target="_blank"><span class="user-center-icon icon-score_shop"></span>积分商城</a></li>                                <li class="l"><a href="/user/setbindsns" target="_blank"><span class="user-center-icon icon-set"></span>个人设置</a></li>                            </ul>                        </div><div class="card-sets clearfix"><a href="/passport/user/logout?referer=//www.imooc.com" class="l">安全退出</a></div>                    </div></div>
+                    </li>
+                </ul>
+            </div>
+                    </div>
+    </div>
+</div>
+<!-- 新人有礼入口 -->
+<a class="newcomer hide index" href="http://www.imooc.com/act/newcomer" target="_blank">
+    <i class="js-close-newcomer imv2-close"></i>
+
+</a>
+
+<div class="bindHintBox js-bindHintBox hide">
+    <div class="pr">
+        为了账号安全，请及时绑定邮箱和手机<a href="/user/setbindsns" class="ml20 color-red" target="_blank">立即绑定</a>
+        <button class="closeBindHint js-closeBindHint" type="button"></button>
+        <div class="arrow"> </div>
+    </div>
+</div>
+
+
+<div id="main">
+
+<div class="settings-cont clearfix">
+  <div class="setting-left l">
+    <div class="avator-wapper">
+      <div class="avator-mode">
+        <img class="avator-img" src="http://img.mukewang.com/54584f3100019e9702200220-200-200.jpg" data-portrait="54584f3100019e9702200220" width="92" height="92">
+                <div class="update-avator" style="bottom: -30px;">
+          <p><a href="javascript:void(0);" class="js-avator-link">更换头像</a></p>
+        </div>
+              </div>
+      <div class="des-mode">
+        <p>用户4113440</p>
+        <span>ID: 7542095</span>
+        <dl class="js-auth-list clearfix auth-list">
+          <dd><i class="icon-set_sns"></i><div class="icon-tips hide"><div class="triangle_border_up"><span></span></div>还未实名认证</div></dd>
+          
+          <dd><i class="imv2-school"></i><div class="icon-tips hide"><div class="triangle_border_up"><span></span></div>还未学籍认证</div></dd>
+          
+          <dd class="active"><i class="icon-set_phone"></i><div class="icon-tips hide"><div class="triangle_border_up"><span></span></div>你已绑定手机</div></dd>
+          <dd><i class="icon-set_email"></i><div class="icon-tips hide"><div class="triangle_border_up"><span></span></div>还未绑定邮箱</div></dd>
+        </dl>
+      </div>
+    </div>
+    <iframe src="about:blank" id="uploadtarget" name="uploadtarget" frameborder="0" style="display:none;"></iframe>
+    <div class="list-wapper">
+      <h2>账户管理</h2>
+      <div class="line"></div>
+      <ul class="menu">
+        <li><a href="" class="on">账号绑定<span class="arr"><i class="icon-right2"></i></span></a></li>
+        <li><a href="">个人信息<span class="arr"><i class="icon-right2"></i></span></a></li>
+        <li><a href="/logout">退出登录<span class="arr"><i class="icon-right2"></i></span></a></li>
+        <!-- <li><a href="/user/authenticate">实名认证<span class="arr"><i class="icon-right2"></i></span></a></li> -->
+        <!-- <li><a href="/user/certificate">学籍认证<span class="arr"><i class="icon-right2"></i></span></a></li> -->
+        <!-- <li><a href="/user/address">收件地址<span class="arr"><i class="icon-right2"></i></span></a></li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="setting-right">
+    <div class="setting-right-wrap wrap-boxes settings">
+        
+<div class="page-settings">
+    <div class="oplog-tip" style="display:none">
+        上次登录时间：2019-12-29  12:21:53&nbsp;&nbsp;&nbsp;地点：  <a href="/user/oplog">查看最近操作记录</a>
+        <span class="tip-close pull-right js-tip-close">×</span>
+    </div>
+    <div class="common-title">
+        账号绑定 <span class="title-tips">完成<b class="color-red">4/4</b></span>
+        <!-- <a href="/help/cate/17" class="pull-right" target="_blank"><i class="icon-ques-revert"></i>常见问题</a> -->
+    </div>
+    <div class="line"></div>
+    <div class="setting">
+        <div class="contentBox">
+            <div class="bingd">
+                <div class="itemBox">
+                	<div class="left">	<i class="icon-set_email"></i></div>
+                	<div class="center">
+                		<p><span class="font1">邮箱</span> 
+                            <span class="font3">
+                            </span> <span class="font4">798****73@qq.com
+                             
+                            </span>
+                        </p>
+                		<p class="font2">可用邮箱加密码登录，可用邮箱找回密码</p>
+                	</div>
+                	<div class="right">
+                                                        <a href="javascript:void(0);" class="binding js-bindemail moco-btn moco-btn-normal">立即绑定</a>
+                                            </div>
+                </div>
+                <div class="itemBox">
+                    <div class="left">  <i class="icon-set_phone"></i></div>
+                    <div class="center">
+                        <p> <span class="font1">手机</span> <span class="font4" id="jsPhone">181******35</span></p>
+                        <p class="font2">可用手机号加密码登录，可通过手机号找回密码 <a class="font2" style="text-decoration: underline;" href="http://www.imooc.com/help/detail/78" target="_blank">无法绑定</a></p>
+                    </div>
+                    <div class="right">
+                                                    <a href="javascript:void(0);" class="change js-operate-phone moco-btn moco-btn-normal" changetype="phone">操作</a> 
+                            <input type="hidden" id="account" value="181******35">
+                                            </div>
+                </div>
+
+                <div class="itemBox">
+                	<div class="left">	<i class="icon-set_key"></i></div>
+                	<div class="center">
+                		<p> <span class="font1">密码</span> 已设置</p>
+                		<p class="font2">用于保护账号信息和登录安全</p>
+                	</div>
+                	<div class="right">
+                        <a href="javascript:void(0);" class="moco-btn moco-btn-normal js-changePWD">修改</a>                        
+                    </div>
+                </div>
+
+                 <div class="itemBox bb0 h380">
+                	<div class="left">	<i class="icon-feedback"></i></div>
+                	<div class="center">
+                		<p class="font1">社交账号</p>
+                		<p class="font2">绑定第三方账号，可以直接登录，还可以将内容同步到以下平台，与更多好友分享</p>
+                        <div class="accountBox">  
+                            <div class="inner-i-box"> 
+                                                                    <i class="icon-qq"></i>
+                                    <p class="mr87 bind-name">QQ</p>
+                                    <p class="mr87 ">已绑定Juchia</p>
+                                    <a href="" aria-role="button" hidefocus="true" class="moco-btn-normal rlf-btn-green btn js-bind mr87">解绑</a>
+                                                             </div>                        
+                            <div class="inner-i-box">   
+                                                                    <i class="icon-weixin"></i>
+                                    <p class="mr87 bind-name">微信</p>
+                                    <p class="mr87 red">未绑定</p>
+                                    <a href="" aria-role="button" hidefocus="true" class="moco-btn-normal rlf-btn-green btn js-bind mr87">添加绑定</a>
+                                                            </div>
+                            <div class="inner-i-box">
+                                                                    <i class="icon-weibo"></i>
+                                    <p class="mr87 bind-name">微博</p>
+                                    <p class="mr87 red">未绑定</p>
+                                    <a href="" aria-role="button" hidefocus="true" class="moco-btn-normal rlf-btn-green btn js-bind mr87">添加绑定</a>
+                                   
+                            </div>
+                            
+                        </div>
+                	</div>
+                	<div class="right">	</div>
+                    <div class="cb">    </div>
+                </div>
+            </div>   
+        </div>
+    </div>
+</div>
+</div>
+  </div>
+</div>
+
+</div>
+
+<div id="footer" data="user,setbindsns" style="display:none">
+    <div class="waper">
+        <div class="footerwaper clearfix">
+            <div class="followus r">
+                <a class="followus-weixin" href="javascript:;" target="_blank" title="微信">
+                    <div class="flw-weixin-box"></div>
+                </a>
+                <a class="followus-weibo" href="http://weibo.com/u/3306361973" target="_blank" title="新浪微博"></a>
+                <a class="followus-qzone" href="http://user.qzone.qq.com/1059809142/" target="_blank" title="QQ空间"></a>
+            </div>
+            <div class="footer_intro l">
+                <div class="footer_link">
+                    <ul>
+                        <li><a href="http://www.imooc.com/" target="_blank">网站首页</a></li>
+                        <li><a href="/index/companytrain" target="_blank" title="企业合作">企业合作</a></li>
+                        <li><a href="/about/job" target="_blank">人才招聘</a></li>
+                        <li> <a href="/about/contact" target="_blank">联系我们</a></li>
+                        <li> <a href="/about/recruit" target="_blank">讲师招募</a></li>
+                        <li> <a href="/help" target="_blank">帮助中心</a></li>
+                        <li> <a href="/user/feedback" target="_blank">意见反馈</a></li>
+                        <li><a href="http://daxue.imooc.com/" target="_blank">慕课大学</a></li>
+                        <li><a href="https://git.imooc.com" target="_blank">代码托管</a></li>
+                        <li> <a href="/about/friendly" target="_blank">友情链接</a></li>
+                       <!--  <li><a href="/corp/index" target="_blank">合作专区</a></li>
+                        <li><a href="/about/us" target="_blank">关于我们</a></li> -->
+                    </ul>
+                </div>
+                <p>Copyright <img draggable="false" class="moco-emoji" alt="©" src="https://www.imooc.com/static/moco/v1.0/images/face/36x36/a9.png"> 2019 imooc.com All Rights Reserved | 京ICP备 12003892号-11 <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802030151" style="color: #93999F;margin:0 5px;" target="_blank"><i class="beian"></i>京公网安备11010802030151号</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="J_GotoTop" class="elevator" style="display:none">
+    <a href="/user/feedback" class="elevator-msg" target="_blank">
+        <i class="icon-feedback"></i>
+        <span class="">意见反馈</span>
+    </a>
+    <a href="http://order.imooc.com/pay/sharegoods" class="elevator-dist" style="display: none;" target="_blank">
+        <i class=""></i>
+        <span class="">分销返利</span>
+    </a>
+    <!-- <a href="http://www.imooc.com/act/invite" class="elevator-dist" target="_blank">
+        <i class=""></i>
+        <span class="">邀请有奖</span>
+    </a> -->
+    <a href="/help" class="elevator-faq" target="_blank">
+        <i class="icon-ques"></i>
+        <span class="">帮助中心</span>
+    </a>
+    <a href="http://www.imooc.com/mobile/app" target="_blank" class="elevator-app">
+        <i class="icon-appdownload"></i>
+        <span class="">APP下载</span>
+        <div class="elevator-app-box"></div>
+    </a>
+    <a href="javascript:void(0)" class="elevator-weixin no-goto" id="js-elevator-weixin">
+        <i class="icon-wxgzh"></i>
+        <span class="">官方微信</span>
+        <div class="elevator-weixin-box"></div>
+    </a>
+    <a href="javascript:void(0)" class="elevator-top no-goto" style="display:none" id="backTop">
+        <i class="icon-up2"></i>
+        <span class="">返回顶部</span>
+    </a>
+</div>
+<div id="globalRightFloat"></div>
+<!--script-->
+<div style="display: none">
+</div>
+</body>
+</html>

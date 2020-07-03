@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.juchia.tutor.business.common.mapper.TeacherMapper">
+
+    <resultMap id="BaseResultMap" type="com.juchia.tutor.business.common.entity.po.Teacher">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="total_success" property="totalSuccess" />
+        <result column="total_comment" property="totalComment" />
+        <result column="experience" property="experience" />
+        <result column="age" property="age" />
+        <result column="nickname" property="nickname" />
+        <result column="realname" property="realname" />
+        <result column="good_at" property="goodAt" />
+        <result column="resume" property="resume" />
+        <result column="qq" property="qq" />
+        <result column="wechat" property="wechat" />
+        <result column="email" property="email" />
+        <result column="phone" property="phone" />
+        <result column="address" property="address" />
+        <result column="current_job" property="currentJob" />
+        <result column="head_image" property="headImage" />
+        <result column="gender" property="gender" />
+        <result column="state" property="state" />
+        <result column="satisfaction" property="satisfaction" />
+        <result column="balance" property="balance" />
+        <result column="hour_price" property="hourPrice" />
+        <result column="province_id" property="provinceId" />
+        <result column="city_id" property="cityId" />
+        <result column="teach_date" property="teachDate" />
+        <result column="realnameAuth" property="realnameAuth" />
+        <result column="studentAuth" property="studentAuth" />
+        <result column="teacherAuth" property="teacherAuth" />
+        <result column="last_login_time" property="lastLoginTime" />
+        <result column="reason" property="reason" />
+        <result column="weight" property="weight" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, total_success, total_comment, experience, age, nickname, realname, good_at, resume, qq, wechat, email, phone, address, current_job, head_image, gender, state, satisfaction, hour_price, balance, province_id, city_id,teach_date, realnameAuth, studentAuth, teacherAuth, last_login_time, reason, weight, status, create_time, update_time
+    </sql>
+
+    <!--DTO结果映射-->
+    <resultMap id="ResultMapDTO" type="com.juchia.tutor.business.common.entity.dto.TeacherDTO">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="total_success" property="totalSuccess" />
+        <result column="total_comment" property="totalComment" />
+        <result column="experience" property="experience" />
+        <result column="age" property="age" />
+        <result column="nickname" property="nickname" />
+        <result column="realname" property="realname" />
+        <result column="good_at" property="goodAt" />
+        <result column="resume" property="resume" />
+        <result column="qq" property="qq" />
+        <result column="wechat" property="wechat" />
+        <result column="email" property="email" />
+        <result column="phone" property="phone" />
+        <result column="address" property="address" />
+        <result column="current_job" property="currentJob" />
+        <result column="head_image" property="headImage" />
+        <result column="gender" property="gender" />
+        <result column="state" property="state" />
+        <result column="satisfaction" property="satisfaction" />
+        <result column="balance" property="balance" />
+        <result column="hour_price" property="hourPrice" />
+        <!--<result column="teacher_type_id" property="teacherTypeId" />-->
+        <!--<result column="teacher_type_id" property="teacherTypeId" />-->
+        <!--<result column="province_id" property="provinceId" />-->
+        <result column="teach_date" property="teachDate" />
+        <result column="realname_auth" property="realnameAuth" />
+        <result column="student_auth" property="studentAuth" />
+        <result column="teacher_auth" property="teacherAuth" />
+        <result column="last_login_time" property="lastLoginTime" />
+        <result column="reason" property="reason" />
+        <result column="weight" property="weight" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+
+        <!--所在省份-->
+        <association property="province" column="province_id" javaType="com.juchia.tutor.business.common.entity.po.Area" select="selectProvinceForTeacher" autoMapping="true" >
+
+        </association>
+
+        <!--所在城市-->
+        <association property="city" column="city_id" javaType="com.juchia.tutor.business.common.entity.po.Area" select="selectCityForTeacher" autoMapping="true" >
+
+        </association>
+
+    </resultMap>
+
+    <!--分页加条件查询DTO-->
+    <select id="selectPageDTO" resultMap="ResultMapDTO">
+        SELECT *
+        FROM `teacher`
+        ${ew.customSqlSegment}
+    </select>
+
+
+    <!--根据id查询DTO-->
+    <select id="selectDTOById" resultMap="ResultMapDTO">
+        SELECT *
+        FROM `teacher`
+        WHERE id = #{id}
+    </select>
+
+    <!--DTO关联查询省份-->
+    <select id="selectProvinceForTeacher" resultType="com.juchia.tutor.business.common.entity.po.Area">
+        Select *
+        FROM `area`
+        WHERE id=#{province_id}
+    </select>
+
+    <!--DTO关联查询城市-->
+    <select id="selectCityForTeacher" resultType="com.juchia.tutor.business.common.entity.po.Area">
+        Select *
+        FROM `area`
+        WHERE id=#{city_id}
+    </select>
+
+</mapper>

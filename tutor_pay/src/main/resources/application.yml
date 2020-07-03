@@ -1,0 +1,54 @@
+server:
+  port: 86
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://tutor-mysql:3306/tutor_pay?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  application:
+    name: pay
+  cloud:
+    nacos:
+      discovery:
+        server-addr: tutor-register:8848
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+  rabbitmq:
+    host: tutor-amqp
+    port: 5672
+    username: guest
+    password: guest
+
+security:
+  oauth2:
+    client:
+      client-id: pay
+      client-secret: pay
+      user-authorization-uri: http://tutor-gateway:9920/auth/oauth/authorize
+      access-token-uri: http://tutor-gateway:9920/auth/oauth/token
+    resource:
+    #以下是不使用jwt时的配置
+          user-info-uri: http://tutor-gateway:9920/auth/user/me
+          token-info-uri: http://tutor-gateway:9920/auth/oauth/check_token
+#    以下是使用JWT且是非对称加密时的配置
+#      jwt:
+#        key-uri: http://tutor-auth:90/oauth/token_key #获取jwt非对称加密时的公钥
+#logging:
+#  level:
+#    root: debug
+juchia:
+  pay:
+    aliPay:
+      appId:
+      merchantPrivateKey:
+      alipayPublicKey:
+      notifyUrl:
+      returnUrl:
+      signType: RSA2
+      charset: utf-8
+      gatewayUrl: https://openapi.alipaydev.com/gateway.do

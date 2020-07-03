@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.juchia.tutor.pay.common.mapper.CashoutMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.juchia.tutor.pay.common.entity.po.Cashout">
+        <id column="id" property="id" />
+        <result column="user_id" property="userId" />
+        <result column="pay_type" property="payType" />
+        <result column="pay_account" property="payAccount" />
+        <result column="pay_no" property="payNo" />
+        <result column="platform_trade_no" property="platformTradeNo" />
+        <result column="cash" property="cash" />
+        <result column="fees" property="fees" />
+        <result column="real_cash" property="realCash" />
+        <result column="balance" property="balance" />
+        <result column="cashout_type" property="cashoutType" />
+        <result column="realname" property="realname" />
+        <result column="cashout_account" property="cashoutAccount" />
+        <result column="note" property="note" />
+        <result column="state" property="state" />
+        <result column="finish_time" property="finishTime" />
+        <result column="reason" property="reason" />
+        <result column="weight" property="weight" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id, pay_type, pay_account, pay_no, platform_trade_no, cash, fees, real_cash, balance, cashout_type, cashout_account, note, state, finish_time, reason, weight, status, cteate_time, update_time
+    </sql>
+
+</mapper>

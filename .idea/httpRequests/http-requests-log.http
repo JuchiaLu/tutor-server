@@ -1,0 +1,8 @@
+GET http://localhost:8060/{GET%20/connect}
+
+###
+
+GET http://localhost:8060/{GET%20/user/me}
+
+###
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/resource_server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sso2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_api/tutor_api_auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_api/tutor_api_business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_api/tutor_api_pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_api/tutor_api_system" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_api/tutor_api_upms" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_auth_back" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_business" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_gateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_pay" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_register" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_system" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/tutor_upms" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

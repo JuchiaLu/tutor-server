@@ -1,0 +1,43 @@
+server:
+  port: 85
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://tutor-mysql:3306/tutor_system?characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root
+  application:
+    name: system
+  cloud:
+    nacos:
+      discovery:
+        server-addr: tutor-register:8848
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+
+security:
+  oauth2:
+    client:
+      client-id: system
+      client-secret: system
+      user-authorization-uri: http://tutor-gateway:9920/auth/oauth/authorize
+      access-token-uri: http://tutor-gateway:9920/auth/oauth/token
+    resource:
+    #以下是不使用jwt时的配置
+          user-info-uri: http://tutor-gateway:9920/auth/user/me
+          token-info-uri: http://tutor-gateway:9920/auth/oauth/check_token
+    #以下是使用JWT且是非对称加密时的配置
+      #jwt:
+        #key-uri: http://tutor-auth:90/oauth/token_key #获取jwt非对称加密时的公钥
+#logging:
+#  level:
+#    root: debug
+juchia:
+  qiniu:
+    accessKey:
+    secretKey:
+    bucket:
+    domain:

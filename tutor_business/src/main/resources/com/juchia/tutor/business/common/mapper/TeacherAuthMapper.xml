@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.juchia.tutor.business.common.mapper.TeacherAuthMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.juchia.tutor.business.common.entity.po.TeacherAuth">
+        <id column="id" property="id" />
+        <result column="realname" property="realname" />
+        <result column="school" property="school" />
+        <result column="image1" property="image1" />
+        <result column="image2" property="image2" />
+        <result column="image3" property="image3" />
+        <result column="image4" property="image4" />
+        <result column="image5" property="image5" />
+        <result column="teacher_id" property="teacherId" />
+        <result column="state" property="state" />
+        <result column="reason" property="reason" />
+        <result column="weight" property="weight" />
+        <result column="status" property="status" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, realname, school, image1, image2, image3, image4, image5, teacher_id, state, reason, weight, status, create_time, update_time
+    </sql>
+
+</mapper>

@@ -1,0 +1,19 @@
+server:
+  port: 9920
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: tutor-register:8848
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "docs.spring.io"
+            allowedMethods:
+            - GET
+      discovery:
+        locator:
+          enabled: true

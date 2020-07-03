@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="tutor_api_auth" />
+        <module name="tutor_api_business" />
+        <module name="tutor_api_pay" />
+        <module name="tutor_api_system" />
+        <module name="tutor_api_upms" />
+        <module name="tutor_auth" />
+        <module name="tutor_business" />
+        <module name="tutor_common" />
+        <module name="tutor_gateway" />
+        <module name="tutor_pay" />
+        <module name="tutor_system" />
+        <module name="tutor_upms" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="resource_server" target="1.8" />
+      <module name="sso1" target="1.8" />
+      <module name="sso2" target="1.8" />
+      <module name="test" target="1.8" />
+      <module name="test2" target="1.8" />
+      <module name="tutor_config" target="1.8" />
+      <module name="tutor_register" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

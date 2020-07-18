@@ -140,7 +140,7 @@ tutor_parent
 # 3. 配置中心，已和注册中心合并 端口8848
 127.0.0.1 tutor-config
 
-# 4. 认证授权微服务 端口80
+# 4. 认证授权微服务 端口8080
 127.0.0.1 tutor-auth 
 
 # 5. 用户微服务 端口81
@@ -170,7 +170,7 @@ tutor_parent
 # 13. 前台门户WEB应用 端口1234
 127.0.0.1 tutor-portal-web
 
-# 14. 单点登录WEB应用 端口80
+# 14. 单点登录WEB应用 端口8080
 127.0.0.1  tutor-ssoLogin-web
 
 # 15. 注册中心WEB应用 端口8848
@@ -294,8 +294,8 @@ tutor_parent
 2. 后台管理WEB应用 端口 9528
    http://tutor-admin-web:9528
 
-3. 单点登录WEB应用 端口 80
-   http://tutor-ssoLogin-web:80
+3. 单点登录WEB应用 端口 8080
+   http://tutor-ssoLogin-web:8080
 
 4. 注册和配置中心WEB应用 端口 8848
    http://tutor-register-web:8848/nacos/index.html
@@ -343,7 +343,7 @@ tutor_parent
 
    谨慎删除路由与权限(菜单)配置，测试数据每天凌晨三点重置
 
-3. [单点登录中心](http://47.115.38.150 )
+3. [单点登录中心](http://47.115.38.150:8080)
 
 4. [API文档](http://47.115.38.150:4593)
 

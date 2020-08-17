@@ -1,4 +1,4 @@
-## 基于Spring Cloud全家桶的分布式微服务C2C模式RESTful风格前后端完全分离的在线家教预约平台(名字一定要唬人)
+## 基于Spring Cloud全家桶的分布式微服务C2C模式RESTful风格前后端完全分离的在线家教预约平台
 
 ### (一) 项目介绍
 
@@ -325,11 +325,11 @@ tutor_parent
 
 ### (九) 图片预览
 
-[图片预览](https://github.com/JuchiaLu/tutor-server/blob/master/PREVIEW.md)
+[点击查看图片预览](https://github.com/JuchiaLu/tutor-server/blob/master/PREVIEW.md)
 
 ### (十) 项目演示
 
-1. [前台门户前端](http://47.115.38.150:4591)
+1. [点击访问前台门户前端](http://47.115.38.150:4591)
 
    学员账户：账号：student 密码：123456
 
@@ -337,14 +337,19 @@ tutor_parent
 
    [支付宝沙箱](https://sandbox.alipaydev.com/user/downloadApp.htm) ：账号：aubhsx3836@sandbox.com 密码：111111 支付密码：111111
 
-2. [后台管理前端](http://47.115.38.150:4592)
+2. [点击访问后台管理前端](http://47.115.38.150:4592)
 
    超级管理员账户：账号：admin 密码：123456
 
    谨慎删除路由与权限(菜单)配置，测试数据每天凌晨三点重置
 
-3. [单点登录中心](http://47.115.38.150:8080)
+3. [点击访问单点登录中心](http://47.115.38.150:8080)
 
-4. [API文档](http://47.115.38.150:4593)
+4. [点击访问API文档中心](http://47.115.38.150:4593)，分别输入如下地址查看各微服务API文档：
+   - 业务： http://47.115.38.150/business/v2/api-docs
+   - 支付：http://47.115.38.150/pay/v2/api-docs
+   - 系统：http://47.115.38.150/system/v2/api-docs
+   - 用户中心：http://47.115.38.150/upms/v2/api-docs
+   - 认证授权中心：http://47.115.38.150/auth/v2/api-docs
 
 注：服务器1Mbps的小水管，首次加载好几兆的程序可能要好多秒，前端没有加载动画，首次加载和登录一片空白几秒是正常的。 

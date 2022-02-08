@@ -4,7 +4,7 @@
 
 ​		在线家教预约平台采用C2C运营模式，Spring Cloud作为后端基础开发框架，Vue.js作为前端基础开发框架，以微服务架构进行设计，前后端完全分离，使用JWT作为无状态解决方案，提供RESTful风格的API、后台动态权限管理、第三方登录以及单点登录功能。系统可以为家长或学员快速方便的的根据自身条件发布家教需求，教员可以按需预约发布的需求，同时还实现了评价、支付、消息、为家教服务做担保等功能。
 
-![](http://47.107.243.187:9530/tutor-server/pictures/02.png)	
+![](https://raw.githubusercontent.com/JuchiaLu/tutor-server/master/pictures/02.png)	
 
 ### (二) 技术选型
 
@@ -74,11 +74,11 @@ tutor_parent
 
 ### (四) 功能需求
 
-![](http://47.107.243.187:9530/tutor-server/pictures/01.png)
+![](https://raw.githubusercontent.com/JuchiaLu/tutor-server/master/pictures/01.png)
 
 ### (五) 系统架构
 
-![](http://47.107.243.187:9530/tutor-server/pictures/03.png)
+![](https://raw.githubusercontent.com/JuchiaLu/tutor-server/master/pictures/03.png)
 
 ### (六) 代码规范
 
@@ -88,11 +88,11 @@ tutor_parent
 
 1. 主要业务状态转换图（家教需求与订单）
 
-   ![](http://47.107.243.187:9530/tutor-server/pictures/04.jpg)
+   ![](https://raw.githubusercontent.com/JuchiaLu/tutor-server/master/pictures/04.jpg)
 
 2. Oauth2流程(以QQ登录为例)
 
-   ![](http://47.107.243.187:9530/tutor-server/pictures/06.jpg)
+   ![](https://raw.githubusercontent.com/JuchiaLu/tutor-server/master/pictures/06.jpg)
 
 3. 单点登录流程(整理中)
 
@@ -100,11 +100,11 @@ tutor_parent
 
    **注：该图片来源于极客时间杨波老师的课程“微服务架构160讲”中的课件**
 
-   ![](http://47.107.243.187:9530/tutor-server/pictures/07.png)
+   ![](https://raw.githubusercontent.com/JuchiaLu/tutor-server/master/pictures/07.png)
 
 5. 后台动态权限控制(简单的RBAC实现)
 
-   ![](http://47.107.243.187:9530/tutor-server/pictures/05.png)
+   ![](https://raw.githubusercontent.com/JuchiaLu/tutor-server/master/pictures/05.png)
 
 ### (八) 感谢
 
